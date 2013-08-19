@@ -41,7 +41,7 @@ sites/
 
 			ckeditor_config
 
-Dependancies
+Dependencies
 ----------------
 
 drush dl better_formats ckeditor features image_resize_filter insert wysiwyg_filter
