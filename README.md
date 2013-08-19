@@ -3,7 +3,7 @@ ckeditor_config
 
 Maintainers
 ===============
-ISUITS
+ISUITC
 
 Michael Hofmockel
 
