@@ -12,10 +12,10 @@ function ckeditor_config_ckeditor_profile_defaults() {
     'CKEditor Global Profile' => array(
       'name' => 'CKEditor Global Profile',
       'settings' => array(
-        'skin' => 'moono',
+        'skin' => 'kama',
         'ckeditor_path' => '%l/ckeditor',
         'ckeditor_local_path' => '',
-        'ckeditor_plugins_path' => '%l/ckeditor_plugins',
+        'ckeditor_plugins_path' => '%m/plugins',
         'ckeditor_plugins_local_path' => '',
         'ckfinder_path' => '%m/ckfinder',
         'ckfinder_local_path' => '',
@@ -78,10 +78,17 @@ function ckeditor_config_ckeditor_profile_defaults() {
         'theme_config_js' => 'f',
         'js_conf' => '',
         'loadPlugins' => array(
+          'confighelper' => array(
+            'name' => 'confighelper',
+            'desc' => 'Configuration helper plugin for CKEditor',
+            'path' => '%plugin_dir%confighelper/',
+            'buttons' => FALSE,
+            'default' => 'f',
+          ),
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',
             'desc' => 'Plugin for inserting Drupal teaser and page breaks.',
-            'path' => '%plugin_dir_extra%drupalbreaks/',
+            'path' => '%plugin_dir%drupalbreaks/',
             'buttons' => array(
               'DrupalBreak' => array(
                 'label' => 'DrupalBreak',

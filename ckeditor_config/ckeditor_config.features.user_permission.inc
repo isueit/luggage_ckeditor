@@ -60,7 +60,7 @@ function ckeditor_config_user_default_permissions() {
     'name' => 'use text format wysiwyg',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'ckeditor editor' => 'ckeditor editor',
     ),
     'module' => 'filter',
   );

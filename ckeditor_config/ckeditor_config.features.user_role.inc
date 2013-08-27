@@ -10,9 +10,9 @@
 function ckeditor_config_user_default_roles() {
   $roles = array();
 
-  // Exported role: editor.
-  $roles['editor'] = array(
-    'name' => 'editor',
+  // Exported role: ckeditor editor.
+  $roles['ckeditor editor'] = array(
+    'name' => 'ckeditor editor',
     'weight' => 3,
   );
 

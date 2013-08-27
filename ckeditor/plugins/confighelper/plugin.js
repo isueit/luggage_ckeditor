@@ -298,8 +298,6 @@ CKEDITOR.plugins.add( 'confighelper',
   *	editor.config.removeDialogFields = "image:info:txtBorder;image:info:txtHSpace";
   */
 
- editor.config.removeDialogFields = "image:info:txtUrl;";
-
  /**
   * Allows to define which dialog fiels must be hidden
   * @name CKEDITOR.config.hideDialogFields
