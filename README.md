@@ -11,21 +11,18 @@ https://github.com/ISUITS/ckeditor_config
 
 Included
 ================
-CKeditor WYSIWYG with adjusted config file
+ckeditor drupal module with adjusted config file and plugins
 
 ckeditor_config Drupal feature
-
-ckeditor_plugins
 
 
 Installation
 ===============
 
+Place the "ckeditor" directory in sites/all/modules
+
 Place the "ckeditor_config" directory (feature) in sites/all/modules
 
-Place the "ckeditor_plugins" directory in sites/all/libraries
-
-Place the "ckeditor" directory in sites/all/libraries
 
 sites/
 
@@ -33,35 +30,32 @@ sites/
 
 		libraries/
 
-			ckeditor
-
-			ckeditor_plugins
+			ckeditor (third party download not included)
 
 		modules/
 
 			ckeditor_config
+			
+			ckeditor (drupal module with unfortunate similar name)
 
-Dependencies
+Dependencies to install
 ----------------
 
 drush dl better_formats ckeditor features image_resize_filter insert wysiwyg_filter
 
-drush @self si standard -y --db-url=mysql://root:root@localhost/ckeditor --site-name=ckeditor --account-name=hof
-
-drush @self uli
-
-todo:
+todo after install:
 ----------------
 admin/config/content/ckeditor/edit/WYSIWYG
 
 add WYSIWYG as the text formats
 
-To Test
-================
-
 admin/people/permissions
 
 edit permissions so the role editor can create a basic page
+
+admin/structure/types
+
+edit a content type to have an image field and enable the insert button feature
 
 admin/people/create
 
