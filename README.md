@@ -33,7 +33,7 @@ sites/
 
 		libraries/
 
-			CKeditor
+			ckeditor
 
 			ckeditor_plugins
 
