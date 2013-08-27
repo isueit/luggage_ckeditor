@@ -45,6 +45,7 @@ drush dl better_formats ckeditor features image_resize_filter insert wysiwyg_fil
 
 todo after install:
 ----------------
+
 admin/config/content/ckeditor/edit/WYSIWYG
 
 add WYSIWYG as the text formats
@@ -62,3 +63,8 @@ admin/people/create
 create a user with the role of editor
 
 add/node/page
+
+Warning!!!
+--------------
+
+Don't upgrade the ckeditor module without preserving your config file and plugins directory
