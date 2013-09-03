@@ -51,7 +51,8 @@ function ckeditor_config_filter_default_formats() {
 div[align<center?justify?left?right],
 p[align<center?justify?left?right],
 br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,img[style|src|height|width],
-table[width|height|border],tr,td,',
+table[width|height|border],tr,td,
+h2,h3,',
           'allow_comments' => 0,
           'nofollow_policy' => 'whitelist',
           'nofollow_domains' => array(
