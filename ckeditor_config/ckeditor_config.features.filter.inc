@@ -50,7 +50,8 @@ function ckeditor_config_filter_default_formats() {
           'valid_elements' => 'a[!href|target<_blank|title],
 div[align<center?justify?left?right],
 p[align<center?justify?left?right],
-br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,img[style|src|height|width],',
+br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,img[style|src|height|width],
+table[width|height|border],tr,td,',
           'allow_comments' => 0,
           'nofollow_policy' => 'whitelist',
           'nofollow_domains' => array(
@@ -76,7 +77,7 @@ br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,img[style|src|height|wi
             'font-weight' => 0,
           ),
           'style_text' => array(
-            'text-align' => 0,
+            'text-align' => 'text-align',
             'text-decoration' => 0,
             'text-indent' => 0,
             'text-transform' => 0,
@@ -123,13 +124,13 @@ br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,img[style|src|height|wi
             'border-left-style' => 0,
           ),
           'style_dimension' => array(
-            'height' => 0,
+            'height' => 'height',
+            'width' => 'width',
             'line-height' => 0,
             'max-height' => 0,
             'max-width' => 0,
             'min-height' => 0,
             'min-width' => 0,
-            'width' => 0,
           ),
           'style_positioning' => array(
             'bottom' => 0,
@@ -142,9 +143,9 @@ br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,img[style|src|height|wi
             'z-index' => 0,
           ),
           'style_layout' => array(
+            'float' => 'float',
             'clear' => 0,
             'display' => 0,
-            'float' => 0,
             'position' => 0,
             'visibility' => 0,
           ),
@@ -155,10 +156,10 @@ br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,img[style|src|height|wi
             'list-style-type' => 0,
           ),
           'style_table' => array(
+            'border-spacing' => 'border-spacing',
+            'empty-cells' => 'empty-cells',
             'border-collapse' => 0,
-            'border-spacing' => 0,
             'caption-side' => 0,
-            'empty-cells' => 0,
             'table-layout' => 0,
           ),
           'style_user' => array(
