@@ -55,11 +55,25 @@ function ckeditor_config_user_default_permissions() {
     'module' => 'better_formats',
   );
 
+  // Exported permission: 'use text format filtered_html'.
+  $permissions['use text format filtered_html'] = array(
+    'name' => 'use text format filtered_html',
+    'roles' => array(),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'use text format full_html'.
+  $permissions['use text format full_html'] = array(
+    'name' => 'use text format full_html',
+    'roles' => array(),
+    'module' => 'filter',
+  );
+
   // Exported permission: 'use text format wysiwyg'.
   $permissions['use text format wysiwyg'] = array(
     'name' => 'use text format wysiwyg',
     'roles' => array(
-      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'ckeditor editor' => 'ckeditor editor',
     ),
     'module' => 'filter',

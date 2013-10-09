@@ -10,6 +10,40 @@
 function ckeditor_config_filter_default_formats() {
   $formats = array();
 
+  // Exported format: Filtered HTML.
+  $formats['filtered_html'] = array(
+    'format' => 'filtered_html',
+    'name' => 'Filtered HTML',
+    'cache' => 1,
+    'status' => 1,
+    'weight' => 0,
+    'filters' => array(
+      'image_resize_filter' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(
+          'link' => 0,
+          'link_class' => '',
+          'link_rel' => '',
+          'image_locations' => array(
+            'local' => 'local',
+            'remote' => 0,
+          ),
+        ),
+      ),
+    ),
+  );
+
+  // Exported format: Full HTML.
+  $formats['full_html'] = array(
+    'format' => 'full_html',
+    'name' => 'Full HTML',
+    'cache' => 1,
+    'status' => 1,
+    'weight' => 1,
+    'filters' => array(),
+  );
+
   // Exported format: WYSIWYG.
   $formats['wysiwyg'] = array(
     'format' => 'wysiwyg',
@@ -50,7 +84,7 @@ function ckeditor_config_filter_default_formats() {
           'valid_elements' => 'a[!href|target<_blank|title],
 div[align<center?justify?left?right],
 p[align<center?justify?left?right],
-br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,img[style|src|height|width],
+br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,img[style|src|height|width|alt|class],
 table[width|height|border],tr,td,
 h2,h3,',
           'allow_comments' => 0,
