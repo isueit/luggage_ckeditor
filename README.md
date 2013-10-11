@@ -9,6 +9,35 @@ Michael Hofmockel
 
 https://github.com/ISUITS/ckeditor_config
 
+Features
+================
+A conservative implementation of the ckeditor in Drupal 7.
+
+Text formats:
+Wywiwyg - admin/config/content/formats/wysiwyg
+- Allowed by authenticated
+Filtered html - admin/config/content/formats/filtered_html
+- Disallowed by all
+- This text format is installed with the standard profile and is highly abused so I have encluded it so it is reset and unused.
+Full html - admin/config/content/formats/full_html
+- Disallowed by all
+- This text format is installed with the standard profile and is highly abused so I have encluded it so it is reset and unused.
+
+ckeditor config changes:
+The ckeditor config can not be changed without altering the config file in so hacking the module.  Would like the module developers to provide a way to override without hacking core.
+I have altered the config to remove the "url" field from the image properties dialog so that users can not include images from othe domains.
+The only way to include an image is to use the insert module.
+I have also removed the image properties advanced dialogue tab as I do not want users to had classes or ID ...
+Users can not escape from the ckeditor and edit source.
+The plugins directory was cleared of all pluggins except Drupal-Break and confighelper
+
+Principles:
+Security
+- Users need to be locked into uploading images through a Drupal field and unable to create img tags that point outside the host domain.
+- Tags and tag attributes are highly limited
+Simple
+- simplier is easier to use.
+
 Included
 ================
 ckeditor drupal module with adjusted config file and plugins
@@ -19,46 +48,31 @@ ckeditor_config Drupal feature
 Installation
 ===============
 
-Place the "ckeditor" directory in sites/all/modules
-
-Place the "ckeditor_config" directory (feature) in sites/all/modules
-
-
-sites/
-
-	all/
-
-		libraries/
-
-			ckeditor (third party download not included)
-
-		modules/
-
-			ckeditor_config
+Commandline where DRUPAL_ROOT is the root of your Drupal site.
+cd DRUPAL_ROOT/sites/all/modules
+git clone https://github.com/ISUITC/ckeditor_config.git
+cd DRUPAL_ROOT/sites/all/libraries
+git clone https://github.com/ckeditor/ckeditor-releases.git -b 4.2.x/full ckeditor
+drush en ckeditor_config
 			
-			ckeditor (drupal module with unfortunate similar name)
 
-Dependencies to install
+Dependencies
 ----------------
 
-drush dl better_formats ckeditor features image_resize_filter insert wysiwyg_filter
+better_formats
+ckeditor - included as the config and plugins directory have been modified
+features
+image - core
+image_resize_filter
+insert
+wysiwyg_filter
 
-todo after install:
+todo after install (Have not figured out how to roll this into feature, yet):
 ----------------
 admin/config/content/ckeditor/edit/WYSIWYG
 
 add WYSIWYG as the text formats
 
-admin/people/permissions
+admin/structure/types/manage/article/fields/field_image
 
-edit permissions so the role editor can create a basic page
-
-admin/structure/types
-
-edit a content type to have an image field and enable the insert button feature
-
-admin/people/create
-
-create a user with the role of editor
-
-add/node/page
+enable the insert button for the article content type
