@@ -85,6 +85,14 @@ function ckeditor_config_ckeditor_profile_defaults() {
             'buttons' => FALSE,
             'default' => 'f',
           ),
+          'devtools' => array(
+            'name' => 'devtools',
+            'desc' => 'Plugin file: devtools',
+            'path' => '%plugin_dir%devtools/',
+            'buttons' => FALSE,
+            'default' => 'f',
+            'active' => 0,
+          ),
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',
             'desc' => 'Plugin for inserting Drupal teaser and page breaks.',

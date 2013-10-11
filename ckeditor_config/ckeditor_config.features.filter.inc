@@ -18,6 +18,34 @@ function ckeditor_config_filter_default_formats() {
     'status' => 1,
     'weight' => 0,
     'filters' => array(
+<<<<<<< HEAD
+      'filter_url' => array(
+        'weight' => -49,
+        'status' => 1,
+        'settings' => array(
+          'filter_url_length' => 72,
+        ),
+      ),
+      'filter_html' => array(
+        'weight' => -48,
+        'status' => 1,
+        'settings' => array(
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>',
+          'filter_html_help' => 1,
+          'filter_html_nofollow' => 0,
+        ),
+      ),
+      'filter_autop' => array(
+        'weight' => -46,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'filter_htmlcorrector' => array(
+        'weight' => -43,
+        'status' => 1,
+        'settings' => array(),
+      ),
+=======
       'image_resize_filter' => array(
         'weight' => 0,
         'status' => 1,
@@ -31,6 +59,7 @@ function ckeditor_config_filter_default_formats() {
           ),
         ),
       ),
+>>>>>>> 27d4f88e3e9e55bcb7b483d5d9e7b2eb65e16a49
     ),
   );
 
@@ -41,7 +70,29 @@ function ckeditor_config_filter_default_formats() {
     'cache' => 1,
     'status' => 1,
     'weight' => 1,
+<<<<<<< HEAD
+    'filters' => array(
+      'filter_url' => array(
+        'weight' => -47,
+        'status' => 1,
+        'settings' => array(
+          'filter_url_length' => 72,
+        ),
+      ),
+      'filter_autop' => array(
+        'weight' => -46,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'filter_htmlcorrector' => array(
+        'weight' => -43,
+        'status' => 1,
+        'settings' => array(),
+      ),
+    ),
+=======
     'filters' => array(),
+>>>>>>> 27d4f88e3e9e55bcb7b483d5d9e7b2eb65e16a49
   );
 
   // Exported format: WYSIWYG.
@@ -81,14 +132,23 @@ function ckeditor_config_filter_default_formats() {
         'weight' => -45,
         'status' => 1,
         'settings' => array(
+<<<<<<< HEAD
+          'valid_elements' => 'a[!href|target|title],
+img[title|style|src|height|width|alt|align],
+table[align|width|height|border|cellpadding|cellspacing],tr,td,
+br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,
+h2,h3,br,hr,div,p,
+address',
+=======
           'valid_elements' => 'a[!href|target<_blank|title],
 div[align<center?justify?left?right],
 p[align<center?justify?left?right],
 br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,img[style|src|height|width|alt|class],
 table[width|height|border],tr,td,
 h2,h3,',
+>>>>>>> 27d4f88e3e9e55bcb7b483d5d9e7b2eb65e16a49
           'allow_comments' => 0,
-          'nofollow_policy' => 'whitelist',
+          'nofollow_policy' => 'disabled',
           'nofollow_domains' => array(),
           'style_color' => array(
             'color' => 0,
