@@ -13,45 +13,35 @@ function ckeditor_config_user_default_permissions() {
   // Exported permission: 'show format selection for node'.
   $permissions['show format selection for node'] = array(
     'name' => 'show format selection for node',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'better_formats',
   );
 
   // Exported permission: 'show format selection for taxonomy_term'.
   $permissions['show format selection for taxonomy_term'] = array(
     'name' => 'show format selection for taxonomy_term',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'better_formats',
   );
 
   // Exported permission: 'show format selection for user'.
   $permissions['show format selection for user'] = array(
     'name' => 'show format selection for user',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'better_formats',
   );
 
   // Exported permission: 'show format tips'.
   $permissions['show format tips'] = array(
     'name' => 'show format tips',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'better_formats',
   );
 
   // Exported permission: 'show more format tips link'.
   $permissions['show more format tips link'] = array(
     'name' => 'show more format tips link',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'better_formats',
   );
 
@@ -74,7 +64,6 @@ function ckeditor_config_user_default_permissions() {
     'name' => 'use text format wysiwyg',
     'roles' => array(
       'authenticated user' => 'authenticated user',
-      'ckeditor editor' => 'ckeditor editor',
     ),
     'module' => 'filter',
   );
