@@ -10,41 +10,6 @@
 function ckeditor_config_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'show format selection for node'.
-  $permissions['show format selection for node'] = array(
-    'name' => 'show format selection for node',
-    'roles' => array(),
-    'module' => 'better_formats',
-  );
-
-  // Exported permission: 'show format selection for taxonomy_term'.
-  $permissions['show format selection for taxonomy_term'] = array(
-    'name' => 'show format selection for taxonomy_term',
-    'roles' => array(),
-    'module' => 'better_formats',
-  );
-
-  // Exported permission: 'show format selection for user'.
-  $permissions['show format selection for user'] = array(
-    'name' => 'show format selection for user',
-    'roles' => array(),
-    'module' => 'better_formats',
-  );
-
-  // Exported permission: 'show format tips'.
-  $permissions['show format tips'] = array(
-    'name' => 'show format tips',
-    'roles' => array(),
-    'module' => 'better_formats',
-  );
-
-  // Exported permission: 'show more format tips link'.
-  $permissions['show more format tips link'] = array(
-    'name' => 'show more format tips link',
-    'roles' => array(),
-    'module' => 'better_formats',
-  );
-
   // Exported permission: 'use text format filtered_html'.
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
