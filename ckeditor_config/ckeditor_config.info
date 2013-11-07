@@ -4,6 +4,7 @@ core = 7.x
 package = Features
 version = 7.x-1.14
 project = ckeditor_config
+github = https://raw.github.com/ISUITC/ckeditor_config/master/ckeditor_config/ckeditor_config.info
 dependencies[] = ckeditor
 dependencies[] = features
 dependencies[] = filter
