@@ -252,6 +252,14 @@ address',
           'rule_style_urls' => array(),
         ),
       ),
+      'pathologic' => array(
+        'weight' => 50,
+        'status' => 1,
+        'settings' => array(
+          'local_paths' => '',
+          'protocol_style' => 'path',
+        ),
+      ),
     ),
   );
 

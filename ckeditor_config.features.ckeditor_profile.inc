@@ -74,7 +74,7 @@ function ckeditor_config_ckeditor_profile_defaults() {
         'UserFilesAbsolutePath' => '%d%b%f/',
         'forcePasteAsPlainText' => 'f',
         'html_entities' => 'f',
-        'scayt_autoStartup' => 'f',
+        'scayt_autoStartup' => 't',
         'theme_config_js' => 'f',
         'js_conf' => '',
         'loadPlugins' => array(
