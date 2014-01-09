@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ckeditor_config.features.ckeditor_profile.inc
+ * luggage_ckeditor.features.ckeditor_profile.inc
  */
 
 /**
  * Implements hook_ckeditor_profile_defaults().
  */
-function ckeditor_config_ckeditor_profile_defaults() {
+function luggage_ckeditor_ckeditor_profile_defaults() {
   $data = array(
     'CKEditor Global Profile' => array(
       'name' => 'CKEditor Global Profile',

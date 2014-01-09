@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ckeditor_config.features.filter.inc
+ * luggage_ckeditor.features.filter.inc
  */
 
 /**
  * Implements hook_filter_default_formats().
  */
-function ckeditor_config_filter_default_formats() {
+function luggage_ckeditor_filter_default_formats() {
   $formats = array();
 
   // Exported format: Filtered HTML.

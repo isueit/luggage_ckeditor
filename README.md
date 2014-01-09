@@ -1,4 +1,4 @@
-ckeditor_config
+luggage_ckeditor
 ===============
 
 Maintainers
@@ -7,7 +7,7 @@ ISUITC
 
 Michael Hofmockel
 
-https://github.com/ISUITS/ckeditor_config
+https://github.com/ISUITS/luggage_ckeditor
 
 Features
 ================
@@ -44,7 +44,7 @@ Included
 ================
 ckeditor drupal module with adjusted config file and plugins
 
-ckeditor_config Drupal feature
+luggage_ckeditor Drupal feature
 
 
 Installation
@@ -54,7 +54,7 @@ Commandline where DRUPAL_ROOT is the root of your Drupal site:
 
 cd DRUPAL_ROOT/sites/all/modules
 
-git clone https://github.com/ISUITC/ckeditor_config.git
+git clone https://github.com/ISUITC/luggage_ckeditor.git
 
 cd DRUPAL_ROOT/sites/all/libraries
 
@@ -73,13 +73,3 @@ Dependencies
 - image_resize_filter
 - insert
 - wysiwyg_filter
-
-todo after install (Have not figured out how to roll this into feature, yet):
-----------------
-admin/config/content/ckeditor/edit/WYSIWYG
-
-add WYSIWYG as the text formats
-
-admin/structure/types/manage/article/fields/field_image
-
-enable the insert button for the article content type

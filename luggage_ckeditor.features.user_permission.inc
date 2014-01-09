@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ckeditor_config.features.user_permission.inc
+ * luggage_ckeditor.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function ckeditor_config_user_default_permissions() {
+function luggage_ckeditor_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: 'use text format filtered_html'.
