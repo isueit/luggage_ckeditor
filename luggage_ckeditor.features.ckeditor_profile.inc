@@ -41,7 +41,7 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
         [\'Blockquote\',\'BulletedList\',\'NumberedList\'],
         [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\'],
         [\'Unlink\',\'Link\'],
-        [\'Format\'],\'RemoveFormat\'],
+        [\'Format\',\'RemoveFormat\'],
         [\'Image\']
     ]',
         'expand' => 't',
