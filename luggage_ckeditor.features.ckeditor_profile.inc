@@ -34,16 +34,26 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
         'uicolor' => 'default',
         'uicolor_user' => '#025C0E',
         'toolbar' => '[
-        [\'PasteText\',\'PasteFromWord\'],
-        [\'Table\',\'HorizontalRule\'],
-        [\'SpecialChar\',\'Subscript\',\'Superscript\'],
-        [\'Bold\',\'Italic\',\'Underline\'],
-        [\'Blockquote\',\'BulletedList\',\'NumberedList\'],
-        [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\'],
-        [\'Unlink\',\'Link\'],
-        [\'Format\',\'RemoveFormat\'],
-        [\'Image\']
-    ]',
+
+    [\'PasteText\',\'PasteFromWord\'],
+
+    [\'Table\',\'HorizontalRule\'],
+
+    [\'SpecialChar\',\'Subscript\',\'Superscript\'],
+
+    [\'Bold\',\'Italic\',\'Underline\'],
+
+    [\'Blockquote\',\'BulletedList\',\'NumberedList\'],
+
+    [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\'],
+
+    [\'Unlink\',\'Link\'],
+
+    [\'Format\',\'RemoveFormat\'],
+
+    [\'Image\',\'luggage_video\']
+
+]',
         'expand' => 't',
         'width' => '100%',
         'lang' => 'en',
@@ -96,6 +106,17 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
               ),
             ),
             'default' => 't',
+          ),
+          'luggage_video' => array(
+            'name' => 'luggage_video',
+            'desc' => 'Luggage Video',
+            'path' => '%base_path%sites/all/modules/luggage/luggage_ckeditor/plugins/video/',
+            'buttons' => array(
+              'luggage_video' => array(
+                'label' => 'Video',
+                'icon' => 'icons/luggage_video.png',
+              ),
+            ),
           ),
         ),
       ),

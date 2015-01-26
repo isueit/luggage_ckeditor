@@ -13,3 +13,20 @@ function luggage_ckeditor_update_projects_alter(&$projects) {
   // Hide a site-specific module from the list.
   unset($projects['luggage_ckeditor']);
 }
+
+
+/**
+ * Implements hook_ckeditor_plugin().
+ */
+function luggage_ckeditor_ckeditor_plugin() {
+  return array(
+    'luggage_video' => array(
+      'name' => 'luggage_video',
+      'desc' => t('Luggage Video'),
+      'path' => drupal_get_path('module', 'luggage_ckeditor'). '/plugins/video/',
+      'buttons' => array(
+        'luggage_video' => array('label' => 'Video', 'icon' => 'icons/luggage_video.png'),
+      )
+    )
+  );
+}
