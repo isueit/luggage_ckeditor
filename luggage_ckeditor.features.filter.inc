@@ -129,8 +129,8 @@ function luggage_ckeditor_filter_default_formats() {
 img[title|style|src|height|width|alt|align],
 table[align|width|height|border|cellpadding|cellspacing],tr,td[align|width|height|border|cellpadding|cellspacing],th[align|width|height|border|cellpadding|cellspacing],
 br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,
-h2,h3,br,hr,div,p,u,ins
-address',
+h2,h3,br,hr,div,p,
+address,sub,sup',
           'allow_comments' => 0,
           'nofollow_policy' => 'disabled',
           'nofollow_domains' => array(),
@@ -256,11 +256,8 @@ address',
         'weight' => 50,
         'status' => 1,
         'settings' => array(
-          'local_paths' => 'http://crops.preview.ent.iastate.edu/
-https://crops.preview.ent.iastate.edu/
-http://crops.extension.iastate.edu/
-https://crops.exttension.iastate.edu/',
-          'protocol_style' => 'proto-rel',
+          'local_paths' => '',
+          'protocol_style' => 'path',
         ),
       ),
     ),
