@@ -76,7 +76,7 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
         'html_entities' => 'f',
         'scayt_autoStartup' => 't',
         'theme_config_js' => 'f',
-        'js_conf' => '',
+        'js_conf' => 'config.extraPlugins = \'image2\';',
         'loadPlugins' => array(
           'confighelper' => array(
             'name' => 'confighelper',
