@@ -29,7 +29,8 @@ ckeditor config changes:
 - The only way to include an image is to use the insert module.
 - I have also removed the image properties advanced dialogue tab as I do not want users to had classes or ID ...
 - Users can not escape from the ckeditor and edit source.
-- The plugins directory was cleared of all pluggins except Drupal-Break and confighelper
+- The plugins directory was cleared of all pluggins except Drupal-Break and confighelper.
+- [Image2](http://ckeditor.com/addon/image2) plugin has been added for image caption support.
 
 Principles:
 
@@ -56,9 +57,7 @@ cd DRUPAL_ROOT/sites/all/modules
 
 git clone https://github.com/ISUITC/luggage_ckeditor.git
 
-cd DRUPAL_ROOT/sites/all/libraries
-
-git clone https://github.com/ckeditor/ckeditor-releases.git -b 4.2.x/full ckeditor
+cp -a luggage_ckeditor/resources/ckeditor ../libraries/
 
 drush en ckeditor_config
 			
