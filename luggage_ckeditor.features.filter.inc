@@ -129,7 +129,7 @@ function luggage_ckeditor_filter_default_formats() {
 img[title|style|src|height|width|alt|align],
 table[align|width|height|border|cellpadding|cellspacing],tr,td[align|width|height|border|cellpadding|cellspacing],th[align|width|height|border|cellpadding|cellspacing],
 br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,
-h2,h3,br,hr,div,p,u
+h2,h3,br,hr,div,p,u,
 address,sub,sup',
           'allow_comments' => 0,
           'nofollow_policy' => 'disabled',
