@@ -76,7 +76,7 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
         'html_entities' => 'f',
         'scayt_autoStartup' => 't',
         'theme_config_js' => 'f',
-        'js_conf' => '',
+        'js_conf' => 'CKEDITOR.config.specialChars = CKEDITOR.config.specialChars.concat( [[ \'&alpha;\', \'Greek small letter alpha\' ], [ \'&beta;\', \'Greek small letter beta\' ]] );',
         'loadPlugins' => array(
           'confighelper' => array(
             'name' => 'confighelper',
