@@ -97,6 +97,13 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
             ),
             'default' => 't',
           ),
+          'justify' => array(
+            'name' => 'justify',
+            'desc' => 'Plugin file: justify',
+            'path' => '%plugin_dir_extra%justify/',
+            'buttons' => FALSE,
+            'default' => 'f',
+          ),
         ),
       ),
       'input_formats' => array(
