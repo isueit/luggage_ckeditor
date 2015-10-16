@@ -13,3 +13,19 @@ function luggage_ckeditor_update_projects_alter(&$projects) {
   // Hide a site-specific module from the list.
   unset($projects['luggage_ckeditor']);
 }
+
+/**
+ * Implements hook_ckeditor_plugin()
+ */
+function luggage_ckeditor_ckeditor_plugin() {
+   return array(
+      'luggage' => array(
+       // Plugin name.
+          'name' => 'luggage',
+          // Plugin description - it will be displayed in the plugins management section of the profile settings.
+          'desc' => t('Luggage specific configurations for CKEditor'),
+          // The full path to the CKEditor plugin directory, trailing slash included.
+          'path' => drupal_get_path('module', 'luggage_ckeditor') . '/plugins/',
+       )
+   );
+}

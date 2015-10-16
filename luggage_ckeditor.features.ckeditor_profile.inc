@@ -97,6 +97,13 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
             ),
             'default' => 't',
           ),
+          'luggage' => array(
+            'name' => 'luggage',
+            'desc' => 'Plugin file: luggage',
+            'path' => '%plugin_dir_extra%luggage/',
+            'buttons' => FALSE,
+            'default' => 'f',
+          ),
         ),
       ),
       'input_formats' => array(
