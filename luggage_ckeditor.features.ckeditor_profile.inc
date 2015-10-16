@@ -15,7 +15,7 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
         'skin' => 'moono',
         'ckeditor_path' => '%l/ckeditor',
         'ckeditor_local_path' => '',
-        'ckeditor_plugins_path' => '%m/plugins',
+        'ckeditor_plugins_path' => '%b/sites/all/modules/luggage/luggage_ckeditor/plugins',
         'ckeditor_plugins_local_path' => '',
         'ckfinder_path' => '%m/ckfinder',
         'ckfinder_local_path' => '',
