@@ -101,6 +101,11 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
             'name' => 'luggage',
             'desc' => 'Plugin file: luggage',
             'path' => '%plugin_dir_extra%luggage/',
+          ),
+          'justify' => array(
+            'name' => 'justify',
+            'desc' => 'Plugin file: justify',
+            'path' => '%plugin_dir_extra%justify/',
             'buttons' => FALSE,
             'default' => 'f',
           ),
