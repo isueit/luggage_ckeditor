@@ -81,7 +81,7 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
           'confighelper' => array(
             'name' => 'confighelper',
             'desc' => 'Configuration helper plugin for CKEditor',
-            'path' => '%plugin_dir%confighelper/',
+            'path' => '%plugin_dir_extra%confighelper/',
             'buttons' => FALSE,
             'default' => 'f',
           ),
