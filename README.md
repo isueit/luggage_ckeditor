@@ -3,11 +3,11 @@ luggage_ckeditor
 
 Maintainers
 ===============
-ISUITC
+ISUBIT
 
 Michael Hofmockel
 
-https://github.com/ISUITS/luggage_ckeditor
+https://github.com/isubit/luggage_ckeditor
 
 Features
 ================
@@ -54,7 +54,7 @@ Commandline where DRUPAL_ROOT is the root of your Drupal site:
 
 cd DRUPAL_ROOT/sites/all/modules
 
-git clone https://github.com/ISUITC/luggage_ckeditor.git
+git clone https://github.com/isubit/luggage_ckeditor.git
 
 cd DRUPAL_ROOT/sites/all/libraries
 
