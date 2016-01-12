@@ -23,7 +23,9 @@ CKEDITOR.editorConfig = function(config) {
   // side
   // (as does Drupal), so just leave this line as is.
   config.protectedSource.push(/<\?[\s\S]*?\?>/g); // PHP Code
-  config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi); // Code tags
+
+  // [#1762328] Uncomment the line below to protect <code> tags in CKEditor (hide them in wysiwyg mode).
+  // config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);
   config.extraPlugins = '';
 
   /*
@@ -57,33 +59,12 @@ CKEDITOR.editorConfig = function(config) {
     config.bodyClass = 'singlepage';
     config.bodyId = 'primary';
   }
-   config.hideDialogFields="image:info:txtUrl";
+
+  // Make CKEditor's edit area as high as the textarea would be.
+  if (this.element.$.rows > 0) {
+    config.height = this.element.$.rows * 20 + 'px';
+  }
 }
-
-// adapted from
-// http://skvare.com/blog/remove-tabs-and-elements-from-ckeditor-dialog-window
-CKEDITOR.on( 'dialogDefinition', function( ev )
-{
-    // Take the dialog name and its definition from the event data.
-    var dialogName = ev.data.name;
-    var dialogDefinition = ev.data.definition;
-
-    // Check if the definition is from the dialog we're
-    // interested in (the 'image' dialog).
-    if ( dialogName == 'image' )
-    {
-        // Remove the 'Advanced' tabs from the 'iamge' dialog.
-        dialogDefinition.removeContents( 'advanced' );
-
-        // Get a reference to the 'image Info' tab.
-        //  this part does not work!!!
-        //  If I can get it working we can remove the confighelper plugin
-        //var infoTab = dialogDefinition.getContents( 'info' );
-
-        // Remove unnecessary widgets from the 'image Info' tab.
-        //infoTab.remove( 'txturl');
-    }
-});
 
 /*
  * Sample toolbars
@@ -96,28 +77,27 @@ Drupal.settings.cke_toolbar_DrupalBasic = [ [ 'Format', 'Bold', 'Italic', '-', '
 Drupal.settings.cke_toolbar_DrupalAdvanced = [
   ['Source'],
   ['Cut','Copy','Paste','PasteText','PasteFromWord','-','SpellChecker', 'Scayt'],
-  ['Undo','Redo','Find','Replace','-','SelectAll','RemoveFormat'],
+  ['Undo','Redo','Find','Replace','-','SelectAll'],
   ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar'],
   ['Maximize', 'ShowBlocks'],
   '/',
   ['Format'],
-  ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
+  ['Bold','Italic','Underline','Strike','-','Subscript','Superscript','-','RemoveFormat'],
   ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
-  ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiRtl','BidiLtr'],
-  ['Link','Unlink','Anchor','Linkit','LinkToNode','LinkToMenu'],
-  ['DrupalBreak', 'DrupalPageBreak']
+  ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl'],
+  ['Link','Unlink','Anchor','Linkit','LinkToNode','LinkToMenu']
 ];
 
-// Toolbar definiton for all buttons
+// Toolbar definition for all buttons
 Drupal.settings.cke_toolbar_DrupalFull = [
   ['Source'],
   ['Cut','Copy','Paste','PasteText','PasteFromWord','-','SpellChecker', 'Scayt'],
-  ['Undo','Redo','Find','Replace','-','SelectAll','RemoveFormat'],
+  ['Undo','Redo','Find','Replace','-','SelectAll'],
   ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','Iframe'],
   '/',
-  ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
+  ['Bold','Italic','Underline','Strike','-','Subscript','Superscript','-','RemoveFormat'],
   ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
-  ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiRtl','BidiLtr'],
+  ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl','-','Language'],
   ['Link','Unlink','Anchor','Linkit','LinkToNode', 'LinkToMenu'],
   '/',
   ['Format','Font','FontSize'],
