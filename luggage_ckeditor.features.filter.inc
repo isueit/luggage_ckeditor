@@ -256,6 +256,7 @@ address,sub,sup',
         'weight' => 50,
         'status' => 1,
         'settings' => array(
+          'settings_source' => 'global',
           'local_paths' => '',
           'protocol_style' => 'path',
         ),
