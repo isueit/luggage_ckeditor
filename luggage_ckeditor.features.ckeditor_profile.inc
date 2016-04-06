@@ -77,12 +77,12 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
         'html_entities' => 'f',
         'scayt_autoStartup' => 't',
         'theme_config_js' => 'f',
-        'js_conf' => '',
+        'js_conf' => 'CKEDITOR.config.specialChars = CKEDITOR.config.specialChars.concat( [[ \'&alpha;\', \'Greek small letter alpha\' ], [ \'&beta;\', \'Greek small letter beta\' ]] );',
         'loadPlugins' => array(
           'confighelper' => array(
             'name' => 'confighelper',
             'desc' => 'Configuration helper plugin for CKEditor',
-            'path' => '%plugin_dir%confighelper/',
+            'path' => '%plugin_dir_extra%confighelper/',
             'buttons' => FALSE,
             'default' => 'f',
           ),
@@ -97,6 +97,18 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
               ),
             ),
             'default' => 't',
+          ),
+          'luggage' => array(
+            'name' => 'luggage',
+            'desc' => 'Plugin file: luggage',
+            'path' => '%plugin_dir_extra%luggage/',
+          ),
+          'justify' => array(
+            'name' => 'justify',
+            'desc' => 'Plugin file: justify',
+            'path' => '%plugin_dir_extra%justify/',
+            'buttons' => FALSE,
+            'default' => 'f',
           ),
         ),
       ),
