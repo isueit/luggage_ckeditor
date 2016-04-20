@@ -18,7 +18,6 @@
     // interested in (the 'image' dialog).
     if ( dialogName == 'image' )
     {
-      console.log(ev);
         // Remove the 'Advanced' tabs from the 'iamge' dialog.
         dialogDefinition.removeContents( 'advanced' );
 
@@ -26,7 +25,6 @@
         //  this part does not work!!!
         //  If I can get it working we can remove the confighelper plugin
         var infoTab = dialogDefinition.getContents( 'info' );
-        console.log(infoTab);
 
         // Remove unnecessary widgets from the 'image Info' tab.
         infoTab.remove( 'txtAlt');
