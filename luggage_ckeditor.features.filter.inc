@@ -127,7 +127,7 @@ function luggage_ckeditor_filter_default_formats() {
         'settings' => array(
           'valid_elements' => 'a[!href|target|title],
 img[title|style|src|height|width|alt|align],
-table[align|width|height|border|cellpadding|cellspacing],tr,td[align|width|height|border|cellpadding|cellspacing],th[align|width|height|border|cellpadding|cellspacing],
+table[align|width|height|border|cellpadding|cellspacing],tr,td[align|width|height|border|cellpadding|cellspacing|colspan|rowspan],th[align|width|height|border|cellpadding|cellspacing|colspan|rowspan],
 br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,
 h2,h3,br,hr,div,p,u,
 address,sub,sup',
