@@ -261,11 +261,7 @@ address,sub,sup',
         'settings' => array(
           'settings_source' => 'global',
           'local_paths' => '',
-          'protocol_style' => 'full',
-          'local_settings' => array(
-            'protocol_style' => 'path',
-            'local_paths' => '',
-          ),
+          'protocol_style' => 'path',
         ),
       ),
     ),
