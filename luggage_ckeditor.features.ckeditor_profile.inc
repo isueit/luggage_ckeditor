@@ -79,7 +79,7 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
         'UserFilesAbsolutePath' => '%d%b%f/',
         'forcePasteAsPlainText' => 'f',
         'html_entities' => 'f',
-        'scayt_autoStartup' => 't',
+        'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
         'js_conf' => 'CKEDITOR.config.specialChars = CKEDITOR.config.specialChars.concat( [[ \'&alpha;\', \'Greek small letter alpha\' ], [ \'&beta;\', \'Greek small letter beta\' ]] );',
         'loadPlugins' => array(
