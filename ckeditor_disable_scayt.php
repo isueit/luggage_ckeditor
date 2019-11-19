@@ -2,7 +2,12 @@
 
 /**
 
-This is inteded to quickly disable the Spell Check as You Type (scayt) plugin in Luggage's WYSIWYG editor if you are not able to update Luggage. The Luggage update includes a hook_update() that runs similar code. Use this only if you are not upgradeing Luaggage itself. By default the scayt will display ads prompting user to buy the service. This shoudn't override any other CKEditor settings and should work with even if the feature is overriden.
+This is inteded to quickly disable the Spell Check as You Type (scayt) plugin in Luggage's
+WYSIWYG editor if you are not able to update Luggage. The Luggage update includes a
+hook_update() that runs similar code. Use this only if you are not upgradeing Luaggage
+itself. By default the scayt will display ads prompting user to buy the service. This
+shoudn't override any other CKEditor settings and should work with even if the feature is
+overriden.
 
 Please test this locally before running on live.
 
