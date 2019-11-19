@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * luggage_ckeditor.features.ckeditor_profile.inc
@@ -105,7 +106,16 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
             'name' => 'indent',
             'desc' => 'Plugin file: indent',
             'path' => '%plugin_dir_extra%indent/',
-            'buttons' => FALSE,
+            'buttons' => array(
+              'Indent' => array(
+                'label' => 'Indent',
+                'icon' => 'icons/indent.png',
+              ),
+              'Outdent' => array(
+                'label' => 'Outdent',
+                'icon' => 'icons/outdent.png',
+              ),
+            ),
             'default' => 'f',
           ),
           'indentblock' => array(
@@ -126,9 +136,25 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
             'name' => 'justify',
             'desc' => 'Plugin file: justify',
             'path' => '%plugin_dir_extra%justify/',
-            'buttons' => FALSE,
+            'buttons' => array(
+              'JustifyLeft' => array(
+                'label' => 'JustifyLeft',
+                'icon' => 'icons/justifyleft.png',
+              ),
+              'JustifyCenter' => array(
+                'label' => 'JustifyCenter',
+                'icon' => 'icons/justifycenter.png',
+              ),
+              'JustifyRight' => array(
+                'label' => 'JustifyRight',
+                'icon' => 'icons/justifyright.png',
+              ),
+              'JustifyBlock' => array(
+                'label' => 'JustifyBlock',
+                'icon' => 'icons/justifyblock.png',
+              ),
+            ),
             'default' => 'f',
-            'active' => 0,
           ),
           'luggage' => array(
             'name' => 'luggage',
@@ -136,7 +162,6 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
             'path' => '%plugin_dir_extra%luggage/',
             'buttons' => FALSE,
             'default' => 'f',
-            'active' => 0,
           ),
         ),
       ),
