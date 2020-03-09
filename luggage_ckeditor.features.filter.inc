@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * luggage_ckeditor.features.filter.inc
@@ -266,8 +267,11 @@ address,sub,sup,
             18 => 'ibimage_right',
             20 => 'button',
           ),
+          'rule_bypass_valid_classes' => 0,
           'rule_valid_ids' => array(),
+          'rule_bypass_valid_ids' => 0,
           'rule_style_urls' => array(),
+          'rule_bypass_style_urls' => 0,
         ),
       ),
       'pathologic' => array(

@@ -10,3 +10,29 @@ function luggage_ckeditor_enable() {
     ->condition('name', 'luggage_ckeditor')
     ->execute();
 }
+
+/**
+ * LUGG-1194 Disable CKEditor Spellcheck on WYSIWYG profile.
+ */
+function luggage_ckeditor_update_7001() {
+
+  module_load_include('inc', 'ckeditor', 'includes/ckeditor.admin');
+
+  $result = db_select('ckeditor_settings', 's')->fields('s')->execute();
+  foreach ($result as $data) {
+    $data->settings = unserialize($data->settings);
+    $data->input_formats = [];
+    $profiles[$data->name] = $data;
+  }
+
+  $profiles['WYSIWYG']->settings['scayt_autoStartup'] = 'f';
+
+  $data = ckeditor_admin_values_to_settings($profiles['WYSIWYG']->settings);
+
+  $result = db_update('ckeditor_settings')
+    ->fields([
+      'settings' => $data,
+    ])
+    ->condition('name', 'WYSIWYG', '=')
+    ->execute();
+}
