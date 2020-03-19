@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * luggage_ckeditor.features.user_permission.inc

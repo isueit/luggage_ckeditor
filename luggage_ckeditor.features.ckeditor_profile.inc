@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * luggage_ckeditor.features.ckeditor_profile.inc
@@ -76,7 +77,7 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
         'UserFilesAbsolutePath' => '%d%b%f/',
         'forcePasteAsPlainText' => 'f',
         'html_entities' => 'f',
-        'scayt_autoStartup' => 't',
+        'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
         'js_conf' => 'CKEDITOR.config.specialChars = CKEDITOR.config.specialChars.concat( [[ \'&alpha;\', \'Greek small letter alpha\' ], [ \'&beta;\', \'Greek small letter beta\' ]] );',
         'loadPlugins' => array(
@@ -103,6 +104,30 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
             'name' => 'justify',
             'desc' => 'Plugin file: justify',
             'path' => '%plugin_dir_extra%justify/',
+            'buttons' => array(
+              'JustifyLeft' => array(
+                'label' => 'JustifyLeft',
+                'icon' => 'icons/justifyleft.png',
+              ),
+              'JustifyCenter' => array(
+                'label' => 'JustifyCenter',
+                'icon' => 'icons/justifycenter.png',
+              ),
+              'JustifyRight' => array(
+                'label' => 'JustifyRight',
+                'icon' => 'icons/justifyright.png',
+              ),
+              'JustifyBlock' => array(
+                'label' => 'JustifyBlock',
+                'icon' => 'icons/justifyblock.png',
+              ),
+            ),
+            'default' => 'f',
+          ),
+          'luggage' => array(
+            'name' => 'luggage',
+            'desc' => 'Plugin file: luggage',
+            'path' => '%plugin_dir_extra%luggage/',
             'buttons' => FALSE,
             'default' => 'f',
           ),
