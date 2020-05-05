@@ -68,17 +68,10 @@ if(typeof(CKEDITOR) !== 'undefined') {
 */
             { 
 		name: 'Red Button Link', 
-		element: 'div', 
+		element: 'span', 
 		attributes: 
 			{ 
-				'background color': '#cc0000',
-				'border-color': '#cc0000',
-				'font-weight': '700',
-				'border-radius': '3px',
-				'cursor': 'pointer',
-				'transition': 'background 0.2s ease',
-				'padding': '7px',
-				'white-space': 'break-spaces',
+				'style' : 'background color: #cc0000; border-color: #cc0000; font-weight: 700; border-radius: 3px; cursor: pointer; transition: background 0.2s ease; padding: 7px; white-space: break-spaces',
 			}
 	   },
   
