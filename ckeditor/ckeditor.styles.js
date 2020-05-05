@@ -16,19 +16,19 @@ if(typeof(CKEDITOR) !== 'undefined') {
             // not needed here by default. You may enable them to avoid placing the
             // "Format" drop-down list in the toolbar, maintaining the same features.
             /*
-            { name : 'Paragraph'		, element : 'p' },
-            { name : 'Heading 1'		, element : 'h1' },
-            { name : 'Heading 2'		, element : 'h2' },
-            { name : 'Heading 3'		, element : 'h3' },
-            { name : 'Heading 4'		, element : 'h4' },
-            { name : 'Heading 5'		, element : 'h5' },
-            { name : 'Heading 6'		, element : 'h6' },
-            { name : 'Preformatted Text', element : 'pre' },
-            { name : 'Address'			, element : 'address' },
+            #{ name : 'Paragraph'		, element : 'p' },
+            #{ name : 'Heading 1'		, element : 'h1' },
+            #{ name : 'Heading 2'		, element : 'h2' },
+            #{ name : 'Heading 3'		, element : 'h3' },
+            #{ name : 'Heading 4'		, element : 'h4' },
+            #{ name : 'Heading 5'		, element : 'h5' },
+            #{ name : 'Heading 6'		, element : 'h6' },
+            #{ name : 'Preformatted Text', element : 'pre' },
+            #{ name : 'Address'			, element : 'address' },
             */
 
-            { name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
-            { name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
+            #{ name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
+            #{ name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
 
             /* Inline Styles */
 
@@ -41,7 +41,9 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Strikethrough'	, element : 'strike' },
             { name : 'Subscript'		, element : 'sub' },
             { name : 'Superscript'		, element : 'sup' },
-            */
+            { name: 'Red Button Link', element: 'p', attributes: { 'class': 'a.btn.btn-danger'} },
+
+
 
             { name : 'Marker: Yellow'	, element : 'span', styles : { 'background-color' : 'Yellow' } },
             { name : 'Marker: Green'	, element : 'span', styles : { 'background-color' : 'Lime' } },
@@ -58,13 +60,16 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Deleted Text'		, element : 'del' },
             { name : 'Inserted Text'	, element : 'ins' },
 
-            { name : 'Cited Work'		, element : 'cite' },
+            { name : 'Cited Work'		, element : 'cite' a},
             { name : 'Inline Quotation'	, element : 'q' },
 
             { name : 'Language: RTL'	, element : 'span', attributes : { 'dir' : 'rtl' } },
             { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },
 
-            /* Object Styles */
+*/
+            { name: 'Red Button Link', element: 'p', attributes: { 'class': 'a.btn.btn-danger'} },
+  
+	 /* Object Styles */
 
             {
                     name : 'Image on Left',
