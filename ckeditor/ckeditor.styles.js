@@ -16,19 +16,19 @@ if(typeof(CKEDITOR) !== 'undefined') {
             // not needed here by default. You may enable them to avoid placing the
             // "Format" drop-down list in the toolbar, maintaining the same features.
             /*
-            #{ name : 'Paragraph'		, element : 'p' },
-            #{ name : 'Heading 1'		, element : 'h1' },
-            #{ name : 'Heading 2'		, element : 'h2' },
-            #{ name : 'Heading 3'		, element : 'h3' },
-            #{ name : 'Heading 4'		, element : 'h4' },
-            #{ name : 'Heading 5'		, element : 'h5' },
-            #{ name : 'Heading 6'		, element : 'h6' },
-            #{ name : 'Preformatted Text', element : 'pre' },
-            #{ name : 'Address'			, element : 'address' },
-            */
+            { name : 'Paragraph'		, element : 'p' },
+            { name : 'Heading 1'		, element : 'h1' },
+            { name : 'Heading 2'		, element : 'h2' },
+            { name : 'Heading 3'		, element : 'h3' },
+            { name : 'Heading 4'		, element : 'h4' },
+            { name : 'Heading 5'		, element : 'h5' },
+            { name : 'Heading 6'		, element : 'h6' },
+            { name : 'Preformatted Text', element : 'pre' },
+            { name : 'Address'			, element : 'address' },
 
-            #{ name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
-            #{ name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
+            { name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
+            { name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
+	    */
 
             /* Inline Styles */
 
@@ -41,7 +41,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Strikethrough'	, element : 'strike' },
             { name : 'Subscript'		, element : 'sub' },
             { name : 'Superscript'		, element : 'sup' },
-            { name: 'Red Button Link', element: 'p', attributes: { 'class': 'a.btn.btn-danger'} },
 
 
 
@@ -67,7 +66,21 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },
 
 */
-            { name: 'Red Button Link', element: 'p', attributes: { 'class': 'a.btn.btn-danger'} },
+            { 
+		name: 'Red Button Link', 
+		element: 'div', 
+		attributes: 
+			{ 
+				'background color': '#cc0000',
+				'border-color': '#cc0000',
+				'font-weight': '700',
+				'border-radius': '3px',
+				'cursor': 'pointer',
+				'transition': 'background 0.2s ease',
+				'padding': '7px',
+				'white-space': 'break-spaces',
+			}
+	   },
   
 	 /* Object Styles */
 
