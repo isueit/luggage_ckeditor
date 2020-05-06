@@ -29,6 +29,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
             { name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
 	    */
+            { name : 'Red Button Link'               , element : 'span', styles : { 'background-color' : '#cc0000' } },
 
             /* Inline Styles */
 
@@ -65,7 +66,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Language: RTL'	, element : 'span', attributes : { 'dir' : 'rtl' } },
             { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },
 
-*/
             { 
 		name: 'Red Button Link', 
 		element: 'span', 
@@ -74,7 +74,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
 				'style' : 'background color: #cc0000; border-color: #cc0000; font-weight: 700; border-radius: 3px; cursor: pointer; transition: background 0.2s ease; padding: 7px; white-space: break-spaces',
 			}
 	   },
-  
+ */ 
 	 /* Object Styles */
 
             {
