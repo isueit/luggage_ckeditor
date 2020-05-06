@@ -68,13 +68,32 @@ if(typeof(CKEDITOR) !== 'undefined') {
 */
 
 	 /* Object Styles */
+ 	
+	{
+                name : 'Red Button',
+                element : 'span',
+                styles : { 'background-color' : '#cc0000', 'color' : '#ffffff', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
+        },
+        
+	 {
+                name : 'Blue Button',
+                element : 'span',
+                styles : { 'background-color' : '#006BA6', 'color' : '#ffffff', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
+        },
+    
+ 	{	
+                name : 'Gray Button',
+                element : 'span',
+                styles : { 'background-color' : '#707372', 'color' : '#ffffff', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
+        },
+
+ {
+                name : 'Red Outline Button',
+                element : 'span',
+                styles : { 'border' : '1px solid #cc0000', 'color' : '#cc0000', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
+        },
 
 	{
-		name : 'Red Button Link',
-		element : 'span',
-		styles : { 'background-color' : '#cc0000', 'color' : '#ffffff', 'font-weight' : '700', 'padding' : '7px', 'border-radius' : '3px' }
-	},
-            {
                     name : 'Image on Left',
                     element : 'img',
                     attributes :
