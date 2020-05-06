@@ -72,7 +72,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
 	{
 		name : 'Red Button Link',
 		element : 'span',
-		styles : { 'background-color' : '#cc0000', 'color' : '#ffffff' }
+		styles : { 'background-color' : '#cc0000', 'color' : '#ffffff', 'font-weight' : '700', 'padding' : '7px', 'border-radius' : '3px' }
 	},
             {
                     name : 'Image on Left',
