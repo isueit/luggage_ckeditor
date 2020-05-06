@@ -88,11 +88,23 @@ if(typeof(CKEDITOR) !== 'undefined') {
         },
 
  {
-                name : 'Red Outline Button',
+                name : 'Red Outline Btn',
                 element : 'span',
                 styles : { 'border' : '1px solid #cc0000', 'color' : '#cc0000', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
         },
 
+ {
+                name : 'Blue Outline Btn',
+                element : 'span',
+                styles : { 'border' : '1px solid #006BA6', 'color' : '#006BA6', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
+        },
+
+ 	{
+                name : 'Gray Outline Btn',
+                element : 'span',
+                styles : { 'border' : '1px solid #707372', 'color' : '#707372', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
+        },
+	
 	{
                     name : 'Image on Left',
                     element : 'img',
