@@ -25,10 +25,10 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Heading 6'		, element : 'h6' },
             { name : 'Preformatted Text', element : 'pre' },
             { name : 'Address'			, element : 'address' },
-            */
 
             { name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
             { name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
+	    */
 
             /* Inline Styles */
 
@@ -41,7 +41,8 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Strikethrough'	, element : 'strike' },
             { name : 'Subscript'		, element : 'sub' },
             { name : 'Superscript'		, element : 'sup' },
-            */
+
+
 
             { name : 'Marker: Yellow'	, element : 'span', styles : { 'background-color' : 'Yellow' } },
             { name : 'Marker: Green'	, element : 'span', styles : { 'background-color' : 'Lime' } },
@@ -58,15 +59,53 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Deleted Text'		, element : 'del' },
             { name : 'Inserted Text'	, element : 'ins' },
 
-            { name : 'Cited Work'		, element : 'cite' },
+            { name : 'Cited Work'		, element : 'cite' a},
             { name : 'Inline Quotation'	, element : 'q' },
 
             { name : 'Language: RTL'	, element : 'span', attributes : { 'dir' : 'rtl' } },
             { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },
 
-            /* Object Styles */
+*/
 
-            {
+	 /* Object Styles */
+ 	
+	{
+                name : 'Red Button',
+                element : 'span',
+                styles : { 'background-color' : '#cc0000', 'color' : '#ffffff', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
+        },
+        
+	 {
+                name : 'Blue Button',
+                element : 'span',
+                styles : { 'background-color' : '#006BA6', 'color' : '#ffffff', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
+        },
+    
+ 	{	
+                name : 'Gray Button',
+                element : 'span',
+                styles : { 'background-color' : '#707372', 'color' : '#ffffff', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
+        },
+
+ {
+                name : 'Red Outline Btn',
+                element : 'span',
+                styles : { 'border' : '1px solid #cc0000', 'color' : '#cc0000', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
+        },
+
+ {
+                name : 'Blue Outline Btn',
+                element : 'span',
+                styles : { 'border' : '1px solid #006BA6', 'color' : '#006BA6', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
+        },
+
+ 	{
+                name : 'Gray Outline Btn',
+                element : 'span',
+                styles : { 'border' : '1px solid #707372', 'color' : '#707372', 'padding' : '7px', 'border-radius' : '3px', 'cursor' : 'pointer', 'transition' : 'background 0.2s ease', 'white-space' : 'break-spaces', }
+        },
+	
+	{
                     name : 'Image on Left',
                     element : 'img',
                     attributes :
