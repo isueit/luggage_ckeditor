@@ -177,12 +177,16 @@ function ckeditor_load_skin_options() {
       closedir($dh);
     }
   }
-  //oops, we have no information about skins, let's use only default
-  if (empty($arr)) {
-    $arr = array(
-      'moono' => 'Moono',
-      'kama' => 'Kama'
-    );
+
+  // If we have no information about skins, use the default for this version.
+  if (!$arr) {
+    $version = explode('.', ckeditor_get_version());
+    if ($version[0] == 3) {
+      $arr = array('kama' => 'Kama');
+    }
+    elseif ($version[0] == 4) {
+      $arr = ($version[1] <= 5) ? array('moono' => 'Moono') : array('moono-lisa' => 'Moono-lisa');
+    }
   }
   asort($arr);
 
@@ -195,15 +199,25 @@ function ckeditor_load_skin_options() {
  * @return string
  */
 function ckeditor_default_skin() {
-  $skin_options = ckeditor_load_skin_options();
-  if (array_key_exists('moono', $skin_options)) {
-    return 'moono';
+  // If there is no available list then bail.
+  if (!$skin_options = ckeditor_load_skin_options()) {
+    return '';
   }
-  if (array_key_exists('kama', $skin_options)) {
-    return 'kama';
+
+  // Default skins in descending order
+  $defaults = array(
+    'moono-lisa' => 'Moono-lisa',
+    'moono' => 'Moono',
+    'kama' => 'Kama'
+  );
+
+  // If there is more than one skin to choose from, use the most current
+  // default.
+  if ($skin_options && ($default = array_intersect_key($defaults, $skin_options))) {
+    return key($default);
   }
-  reset($skin_options);
-  //if any default theme not exists select first from the list
+
+  // If there are no defaults, or only one skin, select the first from the list.
   return key($skin_options);
 }
 
@@ -905,18 +919,49 @@ function ckeditor_profile_settings_compile($global_profile, $profile) {
   }
 
   if (!empty($conf['js_conf'])) {
-    preg_match_all('#config\.(\w+)[\s]*=[\s]*(.+?);[\s]*(?=config\.|$)#is', preg_replace("/[\n\r]+/", "", $conf['js_conf']), $matches);
+    $dtd = [];
+    // Remove comments lines
+    // multi-line
+    $jsConf = preg_replace('#^/\*(?:[^*]*(?:\*(?!/))*)*\*/#m','', $conf['js_conf']);
+    // single-line double slash
+    $jsConf = preg_replace('#([;,{}()\[\]]|[\s\t]+)//.*[ \t]*#m','', $jsConf);
+    // single-line hash
+    $jsConf = preg_replace('/^[ \t]*#.*[ \t]*/m','', $jsConf);
+    //$jsConf = preg_replace('/^#.*/','', $jsConf);
+    // Strip blank lines
+    $jsConf = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "", $jsConf);
+
+    preg_match_all('#config\.(\w+)[\s]*=[\s]*(.+?)[\s]*(?=(^[\s]*|;[\s]*)config\.|$)#is', $jsConf, $matches);
     foreach ($matches[2] as $i => $match) {
       if (!empty($match)) {
+        $match = rtrim($match, ';').';';
+        preg_match_all('#(CKEDITOR\.+[\w\.\$]+[\s]*)=[\s]*(.+?);[\s]*(?=CKEDITOR\.|\/\/|\/*$)#is', $match, $subMatches);
+        // Custom CKEditor setting concatenated
+        if (!empty($subMatches[2])) {
+          foreach($subMatches[2] as $idx => $val) {
+            $match = str_replace($subMatches[0][$idx], 'CKE', $match);
+            $dtd[$subMatches[1][$idx]] = $val;
+          }
+        }
+
         $value = trim($match, " ;\n\r\t\0\x0B");
         if (strcasecmp($value, 'true') == 0) {
           $value = TRUE;
         }
-        if (strcasecmp($value, 'false') == 0) {
+        elseif (strcasecmp($value, 'false') == 0) {
           $value = FALSE;
         }
-        $settings["js_conf"][$matches[1][$i]] = $value;
+        else if ( preg_match('#["|\'][\s]*\+[\s]*["|\']#is', $value)) {
+          // Special case for JS concatenated strings
+          $value = preg_replace('#["|\'][\s]*\+[\s]*["|\']#', '', $value);
+        }
+
+        $settings["js_conf"][$matches[1][$i]] = str_replace('CKEDITOR.dtd.', '', $value);
       }
+    }
+
+    if (!empty($dtd)) {
+      $settings["js_conf"]["dtd"] = $dtd;
     }
   }
 
@@ -1084,11 +1129,21 @@ function _ckeditor_add_css_from_theme($current_theme, &$css_files) {
     $color_paths = variable_get('color_' . $current_theme . '_stylesheets', array());
     if (defined('LANGUAGE_RTL') && $language->direction == LANGUAGE_RTL) {
       if (!empty($color_paths[1])) {
-        $css_files[] = $host . $color_paths[1] . $query_string;
+        if (substr($color_paths[0], 0, 9) == 'public://') {
+          $css_files[] = file_create_url($color_paths[1]) . $query_string;
+        }
+        else {
+          $css_files[] = $host . $color_paths[1] . $query_string;
+        }
       }
     }
     elseif (!empty($color_paths[0])) {
-      $css_files[] = $host . $color_paths[0] . $query_string;
+      if (substr($color_paths[0], 0, 9) == 'public://') {
+        $css_files[] = file_create_url($color_paths[0]) . $query_string;
+      }
+      else {
+        $css_files[] = $host . $color_paths[0] . $query_string;
+      }
     }
   }
   else {
@@ -1302,6 +1357,9 @@ function ckeditor_load_by_field($field, $format, $show_toggle = TRUE, $add_field
     elseif (!empty($field["#language"]) && $field["#language"] != LANGUAGE_NONE) {
       drupal_add_js(array('ckeditor' => array('scayt_language' => ckeditor_scayt_langcode($field["#language"]))), 'setting');
     }
+
+    // Pass Drupal's JS cache-busting string via settings along to CKEditor.
+    drupal_add_js(array('ckeditor' => array('timestamp' => variable_get('css_js_query_string', '0'))), 'setting');
 
     // Remember extra information and reuse it during "Preview"
     $processed_ids[$field['#id']]['suffix'] = $suffix;
